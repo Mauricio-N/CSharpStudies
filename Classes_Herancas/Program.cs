@@ -5,15 +5,16 @@ public class Program
 {
     public static void Main()
     {
-
+        string entrada;
+/* 01-ContaBancaria
         ContaBancaria c1 = new(titular: "Arthur");
         bool OnOFF = true;
         while (OnOFF) { 
             Console.WriteLine($@"
-Digite 1 para sacar
-Digite 2 para depositar
-Digite 3 para transações bancárias
-Digite 0 para sair");
+    Digite 1 para sacar
+    Digite 2 para depositar
+    Digite 3 para transações bancárias
+    Digite 0 para sair");
             Console.Write("Resposta: ");
             switch (Console.ReadLine() ?? "")
             {
@@ -36,5 +37,33 @@ Digite 0 para sair");
             }
         }
         Console.WriteLine("Sistema bancário desativado!");
+        */
+/*02-Retângulo Matemático
+        string entrada;
+        Retangulo_Matematico nCalc = new(altura: 10, largura: 3);
+        Console.WriteLine(nCalc.ShowCalculos());
+        Console.Write("Alterando Altura: ");
+        entrada = Console.ReadLine()??"";
+        nCalc.Altura = 11;
+        Console.Write("Alterando Largura: ");
+        entrada = Console.ReadLine() ?? "";
+        nCalc.Largura = 12;
+        Console.WriteLine(nCalc.ShowCalculos());
+        */
+/*03-Aluno e suas notas
+        Aluno aluno1 = new("Arthur");
+        try
+        {
+            Console.Write("Digite a Primeira nota: ");
+            aluno1.Nota1 = Convert.ToUInt32(Console.ReadLine());
+            Console.Write("Digite a Segunda nota: ");
+            aluno1.Nota2 = Convert.ToUInt32(Console.ReadLine());
+        }
+        catch(Exception msg) { Console.WriteLine(msg.Message); }
+
+        Console.WriteLine($@"Primeira Nota: {aluno1.Nota1:F1}.
+    Segunda Nota: {aluno1.Nota2:F1}
+    Média das provas: {aluno1.CalcularMedia():F1}");
+        */
     }
 }
