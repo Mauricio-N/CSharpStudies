@@ -37,7 +37,7 @@ public class Program
             }
         }
         Console.WriteLine("Sistema bancário desativado!");
-        */
+*/
 /*02-Retângulo Matemático
         string entrada;
         Retangulo_Matematico nCalc = new(altura: 10, largura: 3);
@@ -49,7 +49,7 @@ public class Program
         entrada = Console.ReadLine() ?? "";
         nCalc.Largura = 12;
         Console.WriteLine(nCalc.ShowCalculos());
-        */
+*/
 /*03-Aluno e suas notas
         Aluno aluno1 = new("Arthur");
         try
@@ -62,8 +62,22 @@ public class Program
         catch(Exception msg) { Console.WriteLine(msg.Message); }
 
         Console.WriteLine($@"Primeira Nota: {aluno1.Nota1:F1}.
-    Segunda Nota: {aluno1.Nota2:F1}
-    Média das provas: {aluno1.CalcularMedia():F1}");
-        */
+        Segunda Nota: {aluno1.Nota2:F1}
+        Média das provas: {aluno1.CalcularMedia():F1}");
+*/
+/*04-Controle de Estoque
+    Produto pp = new(nome:"Casquinha",preco:10);
+    Console.Write($"Adicione quantidade de {pp.Nome} em estoque: ");
+    pp.AdicionarEstoque(Console.ReadLine()??"");
+    Console.Write($"Adicione quantidade de {pp.Nome} vendida: ");
+    pp.vender(Console.ReadLine() ?? "");
+    Console.WriteLine("**************************************\n" + pp.ToString()+ "\n**************************************");
+*/ 
+    
+    
+    
+    
     }
+
+
 }
