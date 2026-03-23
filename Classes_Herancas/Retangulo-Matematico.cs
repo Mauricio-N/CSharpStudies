@@ -50,8 +50,7 @@ Perimetro do retangulo: {CalcularPerimetro()}.";
        */
     }
 }
-/*
- * 2. O Retângulo Matemático
+/* 2. O Retângulo Matemático
 Crie uma classe Retangulo com os atributos largura e altura, aplicando o encapsulamento. A = BXH/ P =2B +2H
 •	Crie um construtor que receba os dois valores como parâmetros.
 •	Crie métodos chamados CalcularArea e CalcularPerimetro que retornem os respectivos resultados matemáticos.

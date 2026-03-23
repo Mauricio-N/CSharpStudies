@@ -5,16 +5,16 @@ public class Program
 {
     public static void Main()
     {
-        string entrada;
-/* 01-ContaBancaria
+        string? entrada;
+        /* 01-ContaBancaria
         ContaBancaria c1 = new(titular: "Arthur");
         bool OnOFF = true;
         while (OnOFF) { 
             Console.WriteLine($@"
-    Digite 1 para sacar
-    Digite 2 para depositar
-    Digite 3 para transações bancárias
-    Digite 0 para sair");
+Digite 1 para sacar
+Digite 2 para depositar
+Digite 3 para transações bancárias
+Digite 0 para sair");
             Console.Write("Resposta: ");
             switch (Console.ReadLine() ?? "")
             {
@@ -37,8 +37,8 @@ public class Program
             }
         }
         Console.WriteLine("Sistema bancário desativado!");
-*/
-/*02-Retângulo Matemático
+        */
+        /*02-Retângulo Matemático
         string entrada;
         Retangulo_Matematico nCalc = new(altura: 10, largura: 3);
         Console.WriteLine(nCalc.ShowCalculos());
@@ -49,8 +49,8 @@ public class Program
         entrada = Console.ReadLine() ?? "";
         nCalc.Largura = 12;
         Console.WriteLine(nCalc.ShowCalculos());
-*/
-/*03-Aluno e suas notas
+        */
+        /*03-Aluno e suas notas
         Aluno aluno1 = new("Arthur");
         try
         {
@@ -62,22 +62,39 @@ public class Program
         catch(Exception msg) { Console.WriteLine(msg.Message); }
 
         Console.WriteLine($@"Primeira Nota: {aluno1.Nota1:F1}.
-        Segunda Nota: {aluno1.Nota2:F1}
-        Média das provas: {aluno1.CalcularMedia():F1}");
-*/
-/*04-Controle de Estoque
-    Produto pp = new(nome:"Casquinha",preco:10);
-    Console.Write($"Adicione quantidade de {pp.Nome} em estoque: ");
-    pp.AdicionarEstoque(Console.ReadLine()??"");
-    Console.Write($"Adicione quantidade de {pp.Nome} vendida: ");
-    pp.vender(Console.ReadLine() ?? "");
-    Console.WriteLine("**************************************\n" + pp.ToString()+ "\n**************************************");
-*/ 
-    
-    
+Segunda Nota: {aluno1.Nota2:F1}
+Média das provas: {aluno1.CalcularMedia():F1}");
+        */
+        /*04-Controle de Estoque
+        Produto pp = new(nome:"Casquinha",preco:10);
+        Console.Write($"Adicione quantidade de {pp.Nome} em estoque: ");
+        pp.AdicionarEstoque(Console.ReadLine()??"");
+        Console.Write($"Adicione quantidade de {pp.Nome} vendida: ");
+        pp.vender(Console.ReadLine() ?? "");
+        Console.WriteLine("**************************************\n" + pp.ToString()+ "\n**************************************");
+        */
+        /* 05-Carro Acelerado
+        Carro Car = new(modelo:"F-50",marca:"Ferrari");
+        Car.Frear();
+        Car.Acelerar();
+        Car.Frear();
+        */
+        /* 06-Livro da Biblioteca
+        Livro Lotro = new(autor: "Token", "Ring");
+        Console.Write("Digite o livro para ser emprestado: ");
+        Lotro.Emprestar(Console.ReadLine() ?? "");
+        Console.Write("Digite o livro para ser devolvido: ");
+        Lotro.Devolver(titulo: Console.ReadLine()??"");
+        Console.WriteLine(Lotro.ToString());
+        */
     
     
     }
-
-
 }
+/*
+ 7. Aumento de Salário
+Implemente uma classe Funcionario com os atributos nome, cargo e salario, aplicando o encapsulamento.
+•	Crie um construtor para inicializar todos esses atributos.
+•	Crie um método AplicarAumento. Este método deve calcular o aumento baseado na porcentagem informada por parâmetro e atualizar o salário internamente.
+•	A proteção dos dados aqui é vital: nenhum código externo deve ser capaz de alterar o salário diretamente, a não ser usando o método de aplicar aumento.
+*/

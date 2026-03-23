@@ -4,8 +4,8 @@
     {
         public string Titular { get; private set; }
         private decimal _saldo;// { get; set; } = 0;
-        private Dictionary<DateTime,decimal> HistoricoDeSaques;
-        private Dictionary<DateTime, decimal> HistoricoDeDEpositos;
+        private Dictionary<DateTime,decimal> _historicoDeSaques;
+        private Dictionary<DateTime, decimal> _historicoDeDEpositos;
         static ContaBancaria()
         {
             Console.WriteLine("Sistema bancário foi ativado!");
@@ -13,9 +13,9 @@
         public ContaBancaria(string titular)
         {
             this.Titular = titular;
-            this._saldo = 0;
-            this.HistoricoDeSaques = new();
-            this.HistoricoDeDEpositos = new();
+            this.Saldo = 0;
+            this._historicoDeSaques = new();
+            this._historicoDeDEpositos = new();
         }
         public decimal Saldo
         {
@@ -52,7 +52,7 @@
                 {
                     if (saque > 0 && saque <= Saldo)
                     {
-                        HistoricoDeSaques.Add(DateTime.UtcNow,saque);
+                        _historicoDeSaques.Add(DateTime.UtcNow,saque);
                         Saldo -= saque;
                         Console.WriteLine($"***********************************\n*** Saque efetuado com sucesso! ***\n***********************************");
                         Console.WriteLine($"Saldo atual: {Saldo:C2}");
@@ -100,7 +100,7 @@
                     if (valor > 0)
                     {
                         Console.WriteLine("***********************************\n* Deposito realizado com sucesso! *\n***********************************");
-                        HistoricoDeDEpositos.Add(DateTime.UtcNow,valor);
+                        _historicoDeDEpositos.Add(DateTime.UtcNow,valor);
                         Saldo += valor;
                         Console.WriteLine($"Saldo: {Saldo:C2}\nDeseja realizar um novo deposito?");
                         Console.Write("Digite somente [s] para sim e [n] para não:\nResposta: ");
@@ -113,8 +113,8 @@
         {
             return $@"Titular: {Titular}
 Saldo: {Saldo:C2}
-{string.Join("\n", HistoricoDeSaques.Select(ele => $"Valores sacados: {ele}"))}
-{string.Join("\n", HistoricoDeDEpositos.Select(ele => $"Valores depositados: {ele}"))}";
+{string.Join("\n", _historicoDeSaques.Select(ele => $"Valores sacados: {ele}"))}
+{string.Join("\n", _historicoDeDEpositos.Select(ele => $"Valores depositados: {ele}"))}";
         }
         static bool CheckForLeave(string entrada)
         {
@@ -138,3 +138,10 @@ Saldo: {Saldo:C2}
         }
     }//Fim Classe
 }//Fim namespace
+/* 1. A Conta Bancária Segura
+Crie uma classe ContaBancaria. Ela deve ter os atributos titular e saldo, aplicando o encapsulamento.
+•	Crie um construtor que receba o nome do titular e defina o saldo inicial como zero.
+•	Crie os métodos Depositar e Sacar. O saque só pode ocorrer se o valor solicitado não deixar o saldo negativo.
+•	Crie um método ExibirSaldo que mostre o saldo atual.
+
+ */
