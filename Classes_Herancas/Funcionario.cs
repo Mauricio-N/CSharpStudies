@@ -1,29 +1,32 @@
-﻿namespace Classes_Herancas
+﻿
+namespace Classes_Herancas
 {
     public class Funcionario
     {
         private string? _nome;
         private string? _cargo;
         private decimal _salario;
-
-        public Funcionario(string nome,string cargo,decimal salario)
+        
+        public Funcionario(string nome, string cargo, decimal salario)
         {
             Nome = nome;
             Cargo = cargo;
             Salario = salario;
         }
-        public string Nome 
+        public string Nome
         {
             get => _nome ?? "";
-            set => _nome = string.IsNullOrWhiteSpace(value)? throw new ArgumentException($"Não é possivel adicionar: {value}",nameof(Nome)) : value ;
+            set => _nome = string.IsNullOrWhiteSpace(value) ? throw new ArgumentException($"Não é possivel adicionar: {value}", nameof(Nome)) : value;
         }
-        public string Cargo 
-        {   get => _cargo ?? "";
+        public string Cargo
+        {
+            get => _cargo ?? "";
             set => _cargo = string.IsNullOrWhiteSpace(value) ? throw new ArgumentException($"Não é possivel adicionar: {value}", nameof(Cargo)) : value;
         }
-        public decimal Salario {
+        public decimal Salario
+        {
             get => _salario;
-           private set => _salario = value <= 0 ? throw new ArgumentException($"Não existe mais escravidão! Valor: {value} Inválido ", nameof(Salario)) : value;
+            private set => _salario = value <= 0 ? throw new ArgumentException($"Não existe mais escravidão! Valor: {value} Inválido ", nameof(Salario)) : value;
 
         }
     }

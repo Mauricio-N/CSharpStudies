@@ -37,7 +37,8 @@ Digite 0 para sair");
             }
         }
         Console.WriteLine("Sistema bancário desativado!");
-        */
+        **********************************************************/
+
         /*02-Retângulo Matemático
         string entrada;
         Retangulo_Matematico nCalc = new(altura: 10, largura: 3);
@@ -49,7 +50,8 @@ Digite 0 para sair");
         entrada = Console.ReadLine() ?? "";
         nCalc.Largura = 12;
         Console.WriteLine(nCalc.ShowCalculos());
-        */
+        **********************************************************/
+
         /*03-Aluno e suas notas
         Aluno aluno1 = new("Arthur");
         try
@@ -64,7 +66,8 @@ Digite 0 para sair");
         Console.WriteLine($@"Primeira Nota: {aluno1.Nota1:F1}.
 Segunda Nota: {aluno1.Nota2:F1}
 Média das provas: {aluno1.CalcularMedia():F1}");
-        */
+        **********************************************************/
+        
         /*04-Controle de Estoque
         Produto pp = new(nome:"Casquinha",preco:10);
         Console.Write($"Adicione quantidade de {pp.Nome} em estoque: ");
@@ -72,13 +75,15 @@ Média das provas: {aluno1.CalcularMedia():F1}");
         Console.Write($"Adicione quantidade de {pp.Nome} vendida: ");
         pp.vender(Console.ReadLine() ?? "");
         Console.WriteLine("**************************************\n" + pp.ToString()+ "\n**************************************");
-        */
+        **********************************************************/
+
         /* 05-Carro Acelerado
         Carro Car = new(modelo:"F-50",marca:"Ferrari");
         Car.Frear();
         Car.Acelerar();
         Car.Frear();
-        */
+        **********************************************************/
+
         /* 06-Livro da Biblioteca
         Livro Lotro = new(autor: "Token", "Ring");
         Console.Write("Digite o livro para ser emprestado: ");
@@ -86,15 +91,37 @@ Média das provas: {aluno1.CalcularMedia():F1}");
         Console.Write("Digite o livro para ser devolvido: ");
         Lotro.Devolver(titulo: Console.ReadLine()??"");
         Console.WriteLine(Lotro.ToString());
-        */
-    
-    
+        **********************************************************/
+
+        /* 07-Aumento de Salário
+        Funcionario f1 = new(nome: "Arthur", cargo: "Gerente", salario: 6_780M);
+        Console.Write("Digite a porcentagem de aumento para o funcionário: ");
+        f1.AplicarAumento(Console.ReadLine()??"");
+        Console.WriteLine(f1.ToString());
+        **********************************************************/
+
+        /* 08-Contador Simples
+        Contador conta = new();
+        conta.Incrementar();
+        conta.Incrementar();
+        conta.Incrementar();
+        conta.Decrementar();
+        conta.Zerar();
+        **********************************************************/
+
+        /* 09-Televisão Inteligente
+        Televisao TV1 = new();
+        TV1.MudarCanal(10);
+        TV1.AumentarVolume();
+        //Samsung.MudarCanal("a");
+        **********************************************************/
+
+        /* 10-Personagem
+        Personagem player1 = new(nome: "Dan", forca: 1000);
+        player1.ReceberDano(40);
+        player1.Curar(111);
+        player1.ReceberDano(80);
+        **********************************************************/
+
     }
 }
-/*
- 7. Aumento de Salário
-Implemente uma classe Funcionario com os atributos nome, cargo e salario, aplicando o encapsulamento.
-•	Crie um construtor para inicializar todos esses atributos.
-•	Crie um método AplicarAumento. Este método deve calcular o aumento baseado na porcentagem informada por parâmetro e atualizar o salário internamente.
-•	A proteção dos dados aqui é vital: nenhum código externo deve ser capaz de alterar o salário diretamente, a não ser usando o método de aplicar aumento.
-*/
